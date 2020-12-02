@@ -5,14 +5,17 @@ import Routes from './routes';
 
 import './App.css';
 import Menu from './Components/Menu/Menu';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
     <BrowserRouter>
       <Container fluid>
         <Menu />
-            <Routes />
-          </Container>
+          <Routes />
+          <Footer />
+
+      </Container>
     </BrowserRouter>
   );
 }

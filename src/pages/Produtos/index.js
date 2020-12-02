@@ -1,5 +1,6 @@
-export default function Produtos(props) {
+import Produtos from '../../Components/Produtos/Produtos'
+
+export default function PageProdutos(props) {
   return (
-    <h1>Produtos</h1>
-  )
+    <Produtos /> );
 }
