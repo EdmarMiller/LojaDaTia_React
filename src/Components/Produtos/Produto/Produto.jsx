@@ -4,7 +4,7 @@ export default function Produto(props) {
 
   return (
          
-         <Card style={{ width: '18rem' }}>
+         <Card style={{ minWidth: '18rem', width: '18rem' }}>
             <Card.Title>{props.categoria}</Card.Title>
             <Card.Img variant="top" src={require(`./img/${props.imagem}`).default } alt="Imagem de Produtos"/>
             <Card.Body>
