@@ -1,6 +1,22 @@
+import { Col, Row } from 'react-bootstrap';
 import Produtos from '../../Components/Produtos/Produtos'
+
+
 
 export default function PageProdutos(props) {
   return (
-    <Produtos /> );
+    <>
+     
+      <h2 className="border-bottom py-5 text-center">Produtos</h2>
+      <Row> 
+        <Col lg={3} md={4}>
+        <p>Categoria</p>
+        </Col>
+      
+      <Col lg={9} md={8}>
+      <Produtos /> 
+      </Col>
+      </Row>
+    </>
+    )
 }
