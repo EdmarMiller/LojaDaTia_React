@@ -8,7 +8,7 @@ export default function Produtos() {
 
     useEffect(() => {
         async function fetchData() {
-            const resposta = await fetch("http://localhost/projetos_pessoais/LojadaTia/app/src/api/index.php")
+            const resposta = await fetch("http://projetospessoais/LojaDaTia_React/src/api/index.php")
             
             const dados = await resposta.json()
             setProdutos(dados);

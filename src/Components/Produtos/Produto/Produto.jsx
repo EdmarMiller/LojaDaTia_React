@@ -3,10 +3,10 @@ import {Col, Card, Button } from 'react-bootstrap';
 export default function Produto(props) {
 
   return (
-         
+        <Col className="mb-2">
          <Card style={{ minWidth: '18rem', width: '18rem' }}>
             <Card.Title>{props.categoria}</Card.Title>
-            <Card.Img variant="top" src={require(`./img/${props.imagem}`).default } alt="Imagem de Produtos"/>
+            <Card.Img  variant="top" src={require(`./img/${props.imagem}`).default } alt="Imagem de Produtos"/>
             <Card.Body>
                 <Card.Title>{props.nome}</Card.Title>
                 <Card.Text>
@@ -17,6 +17,6 @@ export default function Produto(props) {
                 <Button variant="danger" size='lg' >Faça sua encomenda</Button>
             </Card.Body>
         </Card>
-      
+      </Col>
   )
 }

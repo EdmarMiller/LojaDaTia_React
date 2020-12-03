@@ -13,8 +13,7 @@ function App() {
       <Container fluid>
         <Menu />
           <Routes />
-          <Footer />
-
+        <Footer />
       </Container>
     </BrowserRouter>
   );

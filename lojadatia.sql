@@ -11,20 +11,20 @@ CREATE TABLE IF NOT EXISTS produtos(
   preco DECIMAL(8, 2)NULL,
   preco_final DECIMAL(8, 2)NULL,
   imagem VARCHAR(250)
-)ENGINE =MyISAM DEFAULT CHARACTER SET = utf8; -- AUTO_INCREMENT=9 referente ao proximo produto que será cadastrado
+)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8; -- AUTO_INCREMENT=9 referente ao proximo produto que será cadastrado
 
-INSERT INTO `lojadatia`.`produtos` (`nome`, `categoria`, `descricao`, `preco`, `preco_final`, `imagem`) VALUES
-('Bolo Branco','Bolo','Delicioso bolo Branco',89.25,69.23,'./img/b_branco.jpg'),
-('Bolo Sem Açucar','Bolo','Bolo ZERO Açucar',120.25,89.23,'./img/b_fruta.jpg'),
-('Bolo Chocolate','Bolo','Delicioso bolo de Chocolate',89.25,69.23,'img/b_chocolate.jpg'),
-('Premium','Doce','Doces especiais pra pessoas especiais!',85.25,67.23,'img/d_cachepo.jpg'),
-('Tradicionais','Doce','Vai um brigadeiro?',82.21,51.15,'img/d_brigadeiro.jpg'),
-('Clássicos','Doce','Aqueles doces atemporais',65.25,35.83,'./img/d_casadinho.jpg'),
-('Padrinhos','Doce','Convites lindos e saborosos.',75.25,57.23,'./img/d_tablete.jpg'),
-('Convidados','Doce','Lembraças Inesquecíveis',64.25,38.23,'./img/d_bem_casado.jpg');
+INSERT INTO `lojadatia`.`produtos` ( `categoria`,`nome`, `descricao`, `preco`, `preco_final`, `imagem`) VALUES
+('Bolo','Bolo Branco','Delicioso bolo Branco',89.25,69.23,'b_branco.jpg'),
+('Bolo','Bolo Sem Açucar','Bolo ZERO Açucar',120.25,89.23,'b_fruta.jpg'),
+('Bolo','Bolo Chocolate','Delicioso bolo de Chocolate',89.25,69.23,'b_chocolate.jpg'),
+('Doce','Premium','Doces especiais pra pessoas especiais!',85.25,67.23,'d_cachepo.jpg'),
+('Doce','Tradicionais','Vai um brigadeiro?',82.21,51.15,'d_brigadeiro.jpg'),
+('Doce','Clássicos','Aqueles doces atemporais',65.25,35.83,'d_casadinho.jpg'),
+('Doce','Padrinhos','Convites lindos e saborosos.',75.25,57.23,'d_tablete.jpg'),
+('Doce','Convidados','Lembraças Inesquecíveis',64.25,38.23,'d_bem_casado.jpg');
 
 CREATE TABLE IF NOT EXISTS pedidos(
-	  id_pedido INTEGER PRIMARY KEY AUTO_INCREMENT,
+	  idpedidos INTEGER PRIMARY KEY AUTO_INCREMENT,
     nome_cliente VARCHAR(50),
     endereco VARCHAR(200),
     telefone VARCHAR(20),
@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS pedidos(
     quantidade INTEGER,
     valor_unit DECIMAL(8,2),
     valor_total DECIMAL(8,2)
-)MyISAM DEFAULT CHARACTER SET = utf8;
+)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
 
 

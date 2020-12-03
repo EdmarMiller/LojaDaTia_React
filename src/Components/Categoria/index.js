@@ -5,10 +5,9 @@ export default function Catedoria(){
   
   <aside>
     <ListGroup variant="flush">
-      <ListGroup.Item action>---</ListGroup.Item>
+      <ListGroup.Item action>Todos</ListGroup.Item>
       <ListGroup.Item action>Bolos</ListGroup.Item>
       <ListGroup.Item action>Doces</ListGroup.Item>
-      <ListGroup.Item action>---</ListGroup.Item>
     </ListGroup>
   </aside>
   )
