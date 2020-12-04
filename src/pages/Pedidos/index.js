@@ -15,7 +15,6 @@ export default function Pedidos() {
       }
       fethData();
       }, [])
-    
       
  const enviaPedido = async (evento) => {
    evento.preventDefault(); // Nao atualizar a pagina altomaticamente

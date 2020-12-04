@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS produtos(
   imagem VARCHAR(250)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8; -- AUTO_INCREMENT=9 referente ao proximo produto que será cadastrado
 
-INSERT INTO `lojadatia`.`produtos` ( `categoria`,`nome`, `descricao`, `preco`, `preco_final`, `imagem`) VALUES
+INSERT INTO `lojadatia`.`produtos` (`categoria`,`nome`, `descricao`, `preco`, `preco_final`, `imagem`) VALUES
 ('Bolo','Bolo Branco','Delicioso bolo Branco',89.25,69.23,'b_branco.jpg'),
 ('Bolo','Bolo Sem Açucar','Bolo ZERO Açucar',120.25,89.23,'b_fruta.jpg'),
 ('Bolo','Bolo Chocolate','Delicioso bolo de Chocolate',89.25,69.23,'b_chocolate.jpg'),
@@ -34,6 +34,21 @@ CREATE TABLE IF NOT EXISTS pedidos(
     valor_total DECIMAL(8,2)
 )ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
 
+CREATE TABLE IF NOT EXISTS vendas(
+	  idvendas INT AUTO_INCREMENT,
+    idpedidos INT,
+    id_produto INT,
+    PRIMARY KEY(idvendas, idpedidos, id_produto),
+    FOREIGN KEY(idpedidos) REFERENCES pedidos (idpedidos),
+    FOREIGN KEY(id_produto) REFERENCES produtos (id_produto)
+
+)ENGINE = InnoDB DEFAULT CHARACTER SET = utf8;
+
+INSERT INTO vendas VALUES 
+(default, 1, 1),
+(default, 2, 2),
+(default, 2, 3);
 
 
 
+CREATE TABLE
