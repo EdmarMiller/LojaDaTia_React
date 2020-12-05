@@ -10,14 +10,16 @@ export default function PageProdutos(props) {
     <>
      
       <h2 className="border-bottom py-5 text-center">Produtos</h2>
-      <Row> 
+      <Row>
+
         <Col lg={3} md={4}>
-        <Catedoria />
+          <Catedoria />
         </Col>
       
         <Col lg={9} md={8}>
-        <Produtos /> 
+          <Produtos /> 
         </Col>
+
       </Row>
     </>
     )

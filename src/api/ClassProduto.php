@@ -6,7 +6,11 @@ class ClassProduto extends ClassConexao{
  
   public function exibeProduto()
   {
-    $BFetch=$this->conectaDB()->prepare("select * from produtos");
+    $BFetch=$this->conectaDB()->prepare("SELECT * FROM produto_categoria 
+    INNER JOIN categoria
+    ON categoria.idcategoria = produto_categoria.idcategoria
+    INNER JOIN produtos 
+    ON produtos.id_produto = produto_categoria.idproduto");
     $BFetch->execute();
 
     $J=[];

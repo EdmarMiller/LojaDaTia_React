@@ -29,63 +29,63 @@ export default function Pedidos() {
 
   return (
     <Container>
-    <Form onSubmit={enviaPedido} className="col-12 col-md-10 mx-auto my-5">
-      <h1>Formulario de Compra</h1>
-      <Form.Group>
-        <Form.Label>Nome</Form.Label>
-        <Form.Control id="nome" name="nome" className="mb-3" type="text" placeholder="Digite seu nome" required />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Endereco</Form.Label>
-        <Form.Control id="endereco" name="endereco" className="mb-3" type="text" placeholder="Digite seu endereco" required />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Telefone</Form.Label>
-        <Form.Control id="telefone" name="telefone" className="mb-3" type="text" placeholder="Digite seu telefone" required />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Produto</Form.Label>
-        <Form.Control id="produto" name="produto" as="select">
-          <option></option>
-          <option>Produto 1</option>
-          <option>Produto 2</option>
-          <option>Produto 3</option>
-          <option>Produto 4</option>
-          <option>Produto 5</option>
-          <option>Produto 6</option>
-         
-        </Form.Control>
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Valor Unitario</Form.Label>
-        <Form.Control  id="valor" name="valor" className="mb-3" type="number" step="0.01" placeholder="Digite o valor unitario" required />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Quantidade</Form.Label>
-        <Form.Control  id="quantidade" name="quantidade" className="mb-3" type="number" min="1" required />
-      </Form.Group>
-      <Form.Group>
-        <Form.Label>Valor Total</Form.Label>
-        <Form.Control id="valor_total" name="valor_total" className="mb-3" type="text" />
-      </Form.Group>
-      <Form.Group>
-        <Button type="submit" variant="success">Enviar</Button>
-        {'  '}
-        <Button type="reset" variant="warning">Limpar</Button>
-      </Form.Group>
-    </Form>
+      <Form onSubmit={enviaPedido} className="col-12 col-md-10 mx-auto my-5">
+        <h1>Formulario de Compra</h1>
+        <Form.Group>
+          <Form.Label>Nome</Form.Label>
+          <Form.Control id="nome" name="nome" className="mb-3" type="text" placeholder="Digite seu nome" required />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>Endereco</Form.Label>
+          <Form.Control id="endereco" name="endereco" className="mb-3" type="text" placeholder="Digite seu endereco" required />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>Telefone</Form.Label>
+          <Form.Control id="telefone" name="telefone" className="mb-3" type="text" placeholder="Digite seu telefone" required />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>Produto</Form.Label>
+          <Form.Control id="produto" name="produto" as="select">
+            <option></option>
+            <option>Produto 1</option>
+            <option>Produto 2</option>
+            <option>Produto 3</option>
+            <option>Produto 4</option>
+            <option>Produto 5</option>
+            <option>Produto 6</option>
+          
+          </Form.Control>
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>Valor Unitario</Form.Label>
+          <Form.Control  id="valor" name="valor" className="mb-3" type="number" step="0.01" placeholder="Digite o valor unitario" required />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>Quantidade</Form.Label>
+          <Form.Control  id="quantidade" name="quantidade" className="mb-3" type="number" min="1" required />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>Valor Total</Form.Label>
+          <Form.Control id="valor_total" name="valor_total" className="mb-3" type="text" />
+        </Form.Group>
+        <Form.Group>
+          <Button type="submit" variant="success">Enviar</Button>
+          {'  '}
+          <Button type="reset" variant="warning">Limpar</Button>
+        </Form.Group>
+      </Form>
     <Table striped bordered hover>
      <thead>
-      <tr>
-        <th>id</th>
-        <th>nome</th>
-        <th>endereco</th>
-        <th>telefone</th>
-        <th>produto</th>
-        <th>valor</th>
-        <th>quantidade</th>
-        <th>total</th>
-      </tr>
+        <tr>
+          <th>id</th>
+          <th>nome</th>
+          <th>endereco</th>
+          <th>telefone</th>
+          <th>produto</th>
+          <th>valor</th>
+          <th>quantidade</th>
+          <th>total</th>
+        </tr>
       </thead>
       <tbody>
       {pedidos && pedidos.map(item => <Pedido key={item.idpedidos} id={item.idpedidos} nome={item.nome_cliente}
