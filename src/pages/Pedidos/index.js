@@ -47,12 +47,14 @@ export default function Pedidos() {
           <Form.Label>Produto</Form.Label>
           <Form.Control id="produto" name="produto" as="select">
             <option></option>
-            <option>Produto 1</option>
-            <option>Produto 2</option>
-            <option>Produto 3</option>
-            <option>Produto 4</option>
-            <option>Produto 5</option>
-            <option>Produto 6</option>
+            <option>Bolo Branco</option>
+            <option>Bolo Sem Açucar</option>
+            <option>Bolo Chocolate</option>
+            <option>Doce Premium</option>
+            <option>Doce Tradicionais</option>
+            <option>Doce Clássicos</option>
+            <option>Doce Padrinhos</option>
+            <option>Doce Convidados</option>
           
           </Form.Control>
         </Form.Group>
